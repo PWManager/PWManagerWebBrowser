@@ -115,7 +115,7 @@ class Browser(QMainWindow):
         browser_view.page().profile().downloadRequested.connect(self.handle_download_requested)
 
         # Добавляем вкладку в QTabWidget
-        tab_name = browser_view.url().toString() if browser_view.url() else "New Tab"
+        tab_name = "New Tab"
         index = self.tabs.addTab(browser_view, tab_name)
         self.tabs.setCurrentIndex(index)
 
@@ -162,7 +162,6 @@ class Browser(QMainWindow):
             current_browser = self.current_browser()
             if current_browser:
                 current_browser.setUrl(QUrl(url))
-                self.tabs.setTabText(self.tabs.currentIndex(), url.replace("https://", "").replace("http://", ""))
 
     def update_url_input(self, qurl):
         """Обновление поля ввода URL, когда URL в браузере меняется."""
