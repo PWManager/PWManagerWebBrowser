@@ -105,7 +105,7 @@ class Browser(QMainWindow):
 
         # Устанавливаем кастомный User-Agent
         browser_view.page().profile().setHttpUserAgent(
-            f"Mozilla/5.0 (Windows NT {version[0]}.{version[1]}; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) PWManagerWebBrowser/1.0 PWManagerFinder/0.1 PWManagerWebExplorer/0.5 (KHTML, like PWManager Web Browser)"
+            f"Mozilla/5.0 (Windows NT {version[0]}.{version[1]}; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) PWManagerWebBrowser/1.0)"
         )
 
         browser_view.page().profile().setHttpCacheType(QWebEngineProfile.HttpCacheType.MemoryHttpCache)
